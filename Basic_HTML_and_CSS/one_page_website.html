@@ -44,7 +44,7 @@
 						<!-- PICTURE-CONTAINER 1 -->
 						<div class="photo-container">
 							<div class="photo">
-								<img src="Pictures\Thumbnail_1.jpg" alt="">
+								<img src="Pictures\Thumbnail_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 								<div class="photo-overlay">
 									<p>This is what the different cheese's look like.</p>
 								</div>
@@ -55,7 +55,7 @@
 						<!-- PICTURE-CONTAINER 2 -->
 						<div class="photo-container">
 							<div class="photo">
-								<img src="Pictures\Thumbnail_2.jpg" alt="">
+								<img src="Pictures\Thumbnail_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
 								<div class="photo-overlay">
 									<p>This is what swiss cheese look's like.</p>
 								</div>
@@ -66,7 +66,7 @@
 						<!-- PICTURE-CONTAINER 3 -->
 						<div class="photo-container">
 							<div class="photo">
-								<img src="Pictures\Thumbnail_3.jpg" alt="">
+								<img src="Pictures\Thumbnail_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
 								<div class="photo-overlay">
 									<p>This is what sliced cheddar cheese look's like.</p>
 								</div>
@@ -77,7 +77,7 @@
 						<!-- PICTURE-CONTAINER 4 -->
 						<div class="photo-container">
 							<div class="photo">
-								<img src="Pictures\Thumbnail_4.jpg" alt="">
+								<img src="Pictures\Thumbnail_4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
 								<div class="photo-overlay">
 									<p>This is what marble cheese look's like.</p>
 								</div>
@@ -88,7 +88,7 @@
 						<!-- PICTURE-CONTAINER 5 -->
 						<div class="photo-container">
 							<div class="photo">
-								<img src="Pictures\Thumbnail_5.jpg" alt="">
+								<img src="Pictures\Thumbnail_5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
 								<div class="photo-overlay">
 									<p>This is what mozzarella cheese look's like.</p>
 								</div>
@@ -99,7 +99,7 @@
 						<!-- PICTURE-CONTAINER 6 -->
 						<div class="photo-container">
 							<div class="photo">
-								<img src="Pictures\Thumbnail_6.jpg" alt="">
+								<img src="Pictures\Thumbnail_6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
 								<div class="photo-overlay">
 									<p>This is cheese look's like bread.</p>
 								</div>
@@ -110,7 +110,7 @@
 						<!-- PICTURE-CONTAINER 7 -->
 						<div class="photo-container">
 							<div class="photo">
-								<img src="Pictures\Thumbnail_7.jpg" alt="">
+								<img src="Pictures\Thumbnail_7.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
 								<div class="photo-overlay">
 									<p>This is what string cheese look's like.</p>
 								</div>
@@ -121,7 +121,7 @@
 						<!-- PICTURE-CONTAINER 8 -->
 						<div class="photo-container">
 							<div class="photo">
-								<img src="Pictures\Thumbnail_8.jpg" alt="">
+								<img src="Pictures\Thumbnail_8.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
 								<div class="photo-overlay">
 									<p>This is what a cut wheel of swiss cheese look's like.</p>
 								</div>
@@ -132,7 +132,7 @@
 						<!-- PICTURE-CONTAINER 9 -->
 						<div class="photo-container">
 							<div class="photo">
-								<img src="Pictures\Thumbnail_9.jpg" alt="">
+								<img src="Pictures\Thumbnail_9.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">
 								<div class="photo-overlay">
 									<p>This is what a block of cheddar cheese look's like.</p>
 								</div>
@@ -145,6 +145,105 @@
 		</section>
 		<!-- END PICTURES -->
 		
+		<!-- THE MODAL/LIGHTBOX -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext">1 / 9</div>
+					<img src="Pictures\Thumbnail_1.jpg" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">2 / 9</div>
+					<img src="Pictures\Thumbnail_2.jpg" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3 / 9</div>
+					<img src="Pictures\Thumbnail_3.jpg" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4 / 9</div>
+					<img src="Pictures\Thumbnail_4.jpg" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">5 / 9</div>
+					<img src="Pictures\Thumbnail_5.jpg" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">6 / 9</div>
+					<img src="Pictures\Thumbnail_6.jpg" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">7 / 9</div>
+					<img src="Pictures\Thumbnail_7.jpg" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">8 / 9</div>
+					<img src="Pictures\Thumbnail_8.jpg" style="width:100%;">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">9 / 9</div>
+					<img src="Pictures\Thumbnail_9.jpg" style="width:100%;">
+				</div>
+
+				<!-- NEXT/PREVIOUS CONTROLS -->
+				<a class="prev" onclick="plusSlides(-1)">%#10094;</a>
+				<a class="next" onclick="plusSlides(1)">%#10095;</a>
+
+				<!-- CAPTION TEXT -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- THUMBNAIL IMAGE CONTROLS -->
+				<div class="column">
+					<img class="demo" src="Pictures\Thumbnail_1.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Pictures\Thumbnail_2.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Pictures\Thumbnail_3.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Pictures\Thumbnail_4.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Pictures\Thumbnail_5.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Pictures\Thumbnail_6.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Pictures\Thumbnail_7.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Pictures\Thumbnail_8.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Pictures\Thumbnail_9.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+			</div>
+		</div>
+
 		<!-- VIDEOS -->
 		<section id="videos">
 			<div class="container">
@@ -194,5 +293,6 @@
 				<p>Disclaimer i own none of what is posted to this website. This website is far from finished i will be working on it weekly</p>
 		<!-- END FOOTER -->
 	
+		<script src="js/one_page_website.js"></script>
 	</body>
 </html>
